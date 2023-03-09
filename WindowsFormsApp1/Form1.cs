@@ -30,5 +30,20 @@ namespace WindowsFormsApp1
             }
                 
         }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            if(cmbLista.SelectedIndex == 0)
+                MessageBox.Show("Por favor selecione um item","Aviso",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            {
+                cmbLista.Items.Remove(cmbLista.SelectedItem);
+                cmbLista.SelectedIndex = 0;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cmbLista.SelectedIndex = 0;
+        }
     }
 }
